@@ -12,12 +12,13 @@ namespace TicTacToe
 {
     public partial class mulPlayDetails : Form
     {
+        
         public mulPlayDetails()
         {
             InitializeComponent();
         }
 
-
+        
         private void mulPlayDetails_Load(object sender, EventArgs e)
         {
             lblMsg.Text = "";

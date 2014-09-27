@@ -26,3 +26,5 @@ D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.re
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.frmChoices.yo.resources
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\yo\TicTacToe.resources.dll
+D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.SPConsole.resources
+D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Result.resources

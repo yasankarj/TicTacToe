@@ -38,8 +38,6 @@
             this.btn7 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
-            this.lblPlayer1 = new System.Windows.Forms.Label();
-            this.lblPlayer2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,6 +47,14 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panelGrid = new System.Windows.Forms.Panel();
+            this.lblPlayer2 = new System.Windows.Forms.Label();
+            this.lblPlayer1 = new System.Windows.Forms.Label();
+            this.pnlPlay1 = new System.Windows.Forms.Panel();
+            this.pnlPlay2 = new System.Windows.Forms.Panel();
+            this.panelGrid.SuspendLayout();
+            this.pnlPlay1.SuspendLayout();
+            this.pnlPlay2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn1
@@ -63,7 +69,7 @@
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(204, 59);
+            this.btn2.Location = new System.Drawing.Point(204, 62);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(100, 100);
             this.btn2.TabIndex = 1;
@@ -141,26 +147,6 @@
             this.btn9.UseVisualStyleBackColor = true;
             this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
-            // lblPlayer1
-            // 
-            this.lblPlayer1.AutoSize = true;
-            this.lblPlayer1.Font = new System.Drawing.Font("Agent Orange", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer1.Location = new System.Drawing.Point(41, 21);
-            this.lblPlayer1.Name = "lblPlayer1";
-            this.lblPlayer1.Size = new System.Drawing.Size(85, 27);
-            this.lblPlayer1.TabIndex = 9;
-            this.lblPlayer1.Text = "label1";
-            // 
-            // lblPlayer2
-            // 
-            this.lblPlayer2.AutoSize = true;
-            this.lblPlayer2.Font = new System.Drawing.Font("Agent Orange", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer2.Location = new System.Drawing.Point(368, 21);
-            this.lblPlayer2.Name = "lblPlayer2";
-            this.lblPlayer2.Size = new System.Drawing.Size(87, 27);
-            this.lblPlayer2.TabIndex = 10;
-            this.lblPlayer2.Text = "label2";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
@@ -225,32 +211,78 @@
             this.panel9.Size = new System.Drawing.Size(100, 100);
             this.panel9.TabIndex = 19;
             // 
+            // panelGrid
+            // 
+            this.panelGrid.BackgroundImage = global::TicTacToe.Properties.Resources.console;
+            this.panelGrid.Controls.Add(this.btn2);
+            this.panelGrid.Controls.Add(this.panel1);
+            this.panelGrid.Controls.Add(this.panel9);
+            this.panelGrid.Controls.Add(this.btn1);
+            this.panelGrid.Controls.Add(this.panel8);
+            this.panelGrid.Controls.Add(this.panel7);
+            this.panelGrid.Controls.Add(this.btn3);
+            this.panelGrid.Controls.Add(this.panel6);
+            this.panelGrid.Controls.Add(this.btn4);
+            this.panelGrid.Controls.Add(this.panel5);
+            this.panelGrid.Controls.Add(this.btn5);
+            this.panelGrid.Controls.Add(this.panel4);
+            this.panelGrid.Controls.Add(this.btn6);
+            this.panelGrid.Controls.Add(this.panel3);
+            this.panelGrid.Controls.Add(this.btn7);
+            this.panelGrid.Controls.Add(this.panel2);
+            this.panelGrid.Controls.Add(this.btn8);
+            this.panelGrid.Controls.Add(this.btn9);
+            this.panelGrid.Location = new System.Drawing.Point(163, 0);
+            this.panelGrid.Name = "panelGrid";
+            this.panelGrid.Size = new System.Drawing.Size(498, 420);
+            this.panelGrid.TabIndex = 20;
+            // 
+            // lblPlayer2
+            // 
+            this.lblPlayer2.AutoSize = true;
+            this.lblPlayer2.Font = new System.Drawing.Font("Agent Orange", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer2.Location = new System.Drawing.Point(17, 10);
+            this.lblPlayer2.Name = "lblPlayer2";
+            this.lblPlayer2.Size = new System.Drawing.Size(87, 27);
+            this.lblPlayer2.TabIndex = 10;
+            this.lblPlayer2.Text = "label2";
+            // 
+            // lblPlayer1
+            // 
+            this.lblPlayer1.AutoSize = true;
+            this.lblPlayer1.Font = new System.Drawing.Font("Agent Orange", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer1.Location = new System.Drawing.Point(17, 10);
+            this.lblPlayer1.Name = "lblPlayer1";
+            this.lblPlayer1.Size = new System.Drawing.Size(85, 27);
+            this.lblPlayer1.TabIndex = 9;
+            this.lblPlayer1.Text = "label1";
+            // 
+            // pnlPlay1
+            // 
+            this.pnlPlay1.Controls.Add(this.lblPlayer1);
+            this.pnlPlay1.Location = new System.Drawing.Point(12, 18);
+            this.pnlPlay1.Name = "pnlPlay1";
+            this.pnlPlay1.Size = new System.Drawing.Size(133, 144);
+            this.pnlPlay1.TabIndex = 21;
+            // 
+            // pnlPlay2
+            // 
+            this.pnlPlay2.Controls.Add(this.lblPlayer2);
+            this.pnlPlay2.Location = new System.Drawing.Point(12, 245);
+            this.pnlPlay2.Name = "pnlPlay2";
+            this.pnlPlay2.Size = new System.Drawing.Size(133, 144);
+            this.pnlPlay2.TabIndex = 22;
+            // 
             // MPConsole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TicTacToe.Properties.Resources.console;
-            this.ClientSize = new System.Drawing.Size(504, 420);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblPlayer2);
-            this.Controls.Add(this.lblPlayer1);
-            this.Controls.Add(this.btn9);
-            this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn7);
-            this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn5);
-            this.Controls.Add(this.btn4);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn1);
+            this.BackColor = System.Drawing.Color.DarkGreen;
+            this.BackgroundImage = global::TicTacToe.Properties.Resources.consoleBG;
+            this.ClientSize = new System.Drawing.Size(673, 418);
+            this.Controls.Add(this.pnlPlay2);
+            this.Controls.Add(this.pnlPlay1);
+            this.Controls.Add(this.panelGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -258,8 +290,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Multi Play Tac Tic Toe";
             this.Load += new System.EventHandler(this.MultiPlayerConsole_Load);
+            this.panelGrid.ResumeLayout(false);
+            this.pnlPlay1.ResumeLayout(false);
+            this.pnlPlay1.PerformLayout();
+            this.pnlPlay2.ResumeLayout(false);
+            this.pnlPlay2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -274,8 +310,6 @@
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn9;
-        private System.Windows.Forms.Label lblPlayer1;
-        private System.Windows.Forms.Label lblPlayer2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -285,5 +319,10 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panelGrid;
+        private System.Windows.Forms.Label lblPlayer2;
+        private System.Windows.Forms.Label lblPlayer1;
+        private System.Windows.Forms.Panel pnlPlay1;
+        private System.Windows.Forms.Panel pnlPlay2;
     }
 }

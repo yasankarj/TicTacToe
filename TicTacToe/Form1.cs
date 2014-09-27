@@ -28,6 +28,7 @@ namespace TicTacToe
 
         private void btnOne_Click(object sender, EventArgs e)
         {
+
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
