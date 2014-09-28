@@ -77,6 +77,7 @@
     <Compile Include="SPConsole.Designer.cs">
       <DependentUpon>SPConsole.cs</DependentUpon>
     </Compile>
+    <Compile Include="timeStamp.cs" />
     <EmbeddedResource Include="Result.resx">
       <DependentUpon>Result.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +139,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Angry-Birds-Main-Theme-Song.wav" />
+    <None Include="Resources\relea.jpg" />
+    <None Include="Resources\congratulations-1929.gif" />
+    <None Include="Resources\click.jpg" />
+    <Content Include="Resources\Image1.gif" />
     <None Include="Resources\consoleBG.jpg" />
     <None Include="Resources\O.jpg" />
     <None Include="Resources\X.jpg" />

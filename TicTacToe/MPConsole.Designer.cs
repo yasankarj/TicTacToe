@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MPConsole));
             this.btn1 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
+            this.btn2 = new System.Windows.Forms.Button();
             this.lblPlayer2 = new System.Windows.Forms.Label();
             this.lblPlayer1 = new System.Windows.Forms.Label();
             this.pnlPlay1 = new System.Windows.Forms.Panel();
@@ -59,93 +59,99 @@
             // 
             // btn1
             // 
+            this.btn1.BackgroundImage = global::TicTacToe.Properties.Resources.click;
             this.btn1.Location = new System.Drawing.Point(98, 59);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(100, 100);
             this.btn1.TabIndex = 0;
-            this.btn1.Text = "button1";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
-            // 
-            // btn2
-            // 
-            this.btn2.Location = new System.Drawing.Point(204, 62);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(100, 100);
-            this.btn2.TabIndex = 1;
-            this.btn2.Text = "button2";
-            this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Click += new System.EventHandler(this.button2_Click);
+            this.btn1.MouseEnter += new System.EventHandler(this.btn1_MouseEnter);
+            this.btn1.MouseLeave += new System.EventHandler(this.btn1_MouseLeave);
             // 
             // btn3
             // 
+            this.btn3.BackgroundImage = global::TicTacToe.Properties.Resources.click;
             this.btn3.Location = new System.Drawing.Point(310, 59);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(100, 100);
             this.btn3.TabIndex = 2;
-            this.btn3.Text = "button3";
             this.btn3.UseVisualStyleBackColor = true;
             this.btn3.Click += new System.EventHandler(this.btn3_Click);
+            this.btn3.MouseEnter += new System.EventHandler(this.btn3_MouseEnter);
+            this.btn3.MouseLeave += new System.EventHandler(this.btn3_MouseLeave);
             // 
             // btn4
             // 
+            this.btn4.BackgroundImage = global::TicTacToe.Properties.Resources.click;
             this.btn4.Location = new System.Drawing.Point(98, 165);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(100, 100);
             this.btn4.TabIndex = 3;
-            this.btn4.Text = "button4";
             this.btn4.UseVisualStyleBackColor = true;
             this.btn4.Click += new System.EventHandler(this.btn4_Click);
+            this.btn4.MouseEnter += new System.EventHandler(this.btn4_MouseEnter);
+            this.btn4.MouseLeave += new System.EventHandler(this.btn4_MouseLeave);
             // 
             // btn5
             // 
+            this.btn5.BackgroundImage = global::TicTacToe.Properties.Resources.click;
             this.btn5.Location = new System.Drawing.Point(204, 165);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(100, 100);
             this.btn5.TabIndex = 4;
-            this.btn5.Text = "button5";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
+            this.btn5.MouseEnter += new System.EventHandler(this.btn5_MouseEnter);
+            this.btn5.MouseLeave += new System.EventHandler(this.btn5_MouseLeave);
             // 
             // btn6
             // 
+            this.btn6.BackgroundImage = global::TicTacToe.Properties.Resources.click;
             this.btn6.Location = new System.Drawing.Point(310, 165);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(100, 100);
             this.btn6.TabIndex = 5;
-            this.btn6.Text = "button6";
             this.btn6.UseVisualStyleBackColor = true;
             this.btn6.Click += new System.EventHandler(this.btn6_Click);
+            this.btn6.MouseEnter += new System.EventHandler(this.btn6_MouseEnter);
+            this.btn6.MouseLeave += new System.EventHandler(this.btn6_MouseLeave);
             // 
             // btn7
             // 
+            this.btn7.BackgroundImage = global::TicTacToe.Properties.Resources.click;
             this.btn7.Location = new System.Drawing.Point(98, 271);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(100, 100);
             this.btn7.TabIndex = 6;
-            this.btn7.Text = "button7";
             this.btn7.UseVisualStyleBackColor = true;
             this.btn7.Click += new System.EventHandler(this.button7_Click);
+            this.btn7.MouseEnter += new System.EventHandler(this.btn7_MouseEnter);
+            this.btn7.MouseLeave += new System.EventHandler(this.btn7_MouseLeave);
             // 
             // btn8
             // 
+            this.btn8.BackgroundImage = global::TicTacToe.Properties.Resources.click;
             this.btn8.Location = new System.Drawing.Point(204, 271);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(100, 100);
             this.btn8.TabIndex = 7;
-            this.btn8.Text = "button8";
             this.btn8.UseVisualStyleBackColor = true;
             this.btn8.Click += new System.EventHandler(this.button8_Click);
+            this.btn8.MouseEnter += new System.EventHandler(this.btn8_MouseEnter);
+            this.btn8.MouseLeave += new System.EventHandler(this.btn8_MouseLeave);
             // 
             // btn9
             // 
+            this.btn9.BackgroundImage = global::TicTacToe.Properties.Resources.click;
             this.btn9.Location = new System.Drawing.Point(310, 271);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(100, 100);
             this.btn9.TabIndex = 8;
-            this.btn9.Text = "button9";
             this.btn9.UseVisualStyleBackColor = true;
             this.btn9.Click += new System.EventHandler(this.btn9_Click);
+            this.btn9.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
+            this.btn9.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
             // 
             // panel1
             // 
@@ -203,6 +209,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(100, 100);
             this.panel8.TabIndex = 18;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // panel9
             // 
@@ -236,6 +243,18 @@
             this.panelGrid.Name = "panelGrid";
             this.panelGrid.Size = new System.Drawing.Size(498, 420);
             this.panelGrid.TabIndex = 20;
+            // 
+            // btn2
+            // 
+            this.btn2.BackgroundImage = global::TicTacToe.Properties.Resources.click;
+            this.btn2.Location = new System.Drawing.Point(204, 59);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(100, 100);
+            this.btn2.TabIndex = 20;
+            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
+            this.btn2.MouseEnter += new System.EventHandler(this.btn2_MouseEnter);
+            this.btn2.MouseLeave += new System.EventHandler(this.btn2_MouseLeave);
             // 
             // lblPlayer2
             // 
@@ -302,7 +321,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btn5;
@@ -324,5 +342,6 @@
         private System.Windows.Forms.Label lblPlayer1;
         private System.Windows.Forms.Panel pnlPlay1;
         private System.Windows.Forms.Panel pnlPlay2;
+        private System.Windows.Forms.Button btn2;
     }
 }

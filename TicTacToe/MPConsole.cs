@@ -5,8 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace TicTacToe
 {
@@ -20,55 +20,61 @@ namespace TicTacToe
                                          * array elements will hold 1 if player 1 clicks
                                          * array elements will hold 2 f player 2 clicks
                                          */
-
+        Stopwatch time = new Stopwatch();
+        
         public void checkGrid(int x)
         {
             
             /*check for first row of the grid*/
             if (grid[0, 0] == x && grid[0, 1] == x && grid[0, 2] == x)
             {
-                Result newConForm = new Result(x);
+                Result newConForm = new Result(x, player1, player2);
                 newConForm.Show();
+                time.Stop();
+                long t = time.ElapsedMilliseconds;
+                timeStamp timeC = new timeStamp(t/1000);
+
+                Console.WriteLine(timeC.show());
             }
             /*check for second row of the grid*/
             else if (grid[1, 0] == x && grid[1, 1] == x && grid[1, 2] == x)
             {
-                Result newConForm = new Result(x);
+                Result newConForm = new Result(x, player1, player2);
                 newConForm.Show();
             }
 
              /*check for third row of the grid*/
             else if (grid[2, 0] == x && grid[2, 1] == x && grid[2, 2] == x)
             {
-                Result newConForm = new Result(x);
+                Result newConForm = new Result(x, player1, player2);
                 newConForm.Show();
             }
 
              /*check for fourth column of the grid*/
             else if (grid[0, 0] == x && grid[1, 0] == x && grid[2, 0] == x)
             {
-                Result newConForm = new Result(x);
+                Result newConForm = new Result(x, player1, player2);
                 newConForm.Show();
             }
 
              /*check for fifth column of the grid*/
             else if (grid[0, 1] == x && grid[1, 1] == x && grid[2, 1] == x)
             {
-                Result newConForm = new Result(x);
+                Result newConForm = new Result(x, player1, player2);
                 newConForm.Show();
             }
 
              /*check for sixth column of the grid*/
             else if (grid[0, 2] == x && grid[1, 2] == x && grid[2, 2] == x)
             {
-                Result newConForm = new Result(x);
+                Result newConForm = new Result(x, player1,player2);
                 newConForm.Show();
             }
 
              /*check for first diagonal of the grid*/
             else if (grid[0, 0] == x && grid[1, 1] == x && grid[2, 2] == x)
             {
-                Result newConForm = new Result(x);
+                Result newConForm = new Result(x, player1, player2);
                 newConForm.Show();
             }
 
@@ -76,7 +82,14 @@ namespace TicTacToe
             else if (grid[0, 2] == x && grid[1, 1] == x && grid[2, 0] == x)
             {
                 panelGrid.Dispose();
-                Result newConForm = new Result(x);
+                Result newConForm = new Result(x, player1, player2);
+                newConForm.Show();
+            }
+
+            else if (counter == 9)
+            {
+                panelGrid.Dispose();
+                Result newConForm = new Result(x, player1+"Booooooooooooo", player2);
                 newConForm.Show();
             }
         }
@@ -111,7 +124,15 @@ namespace TicTacToe
         }
         /*clickJob method finished*/
 
-        
+        public void btnEnter(Button btn)
+        {
+            btn.BackgroundImage = TicTacToe.Properties.Resources.relea;        
+        }
+
+        public void btnRelease(Button btn)
+        {
+            btn.BackgroundImage = TicTacToe.Properties.Resources.click;
+        }
         public MPConsole(String P1, String P2)
         {
             /*constructed with two strings which were collected from previous form*/
@@ -140,6 +161,7 @@ namespace TicTacToe
             panel7.Visible = false;
             panel8.Visible = false;
             panel9.Visible = false;
+            time.Start();
 
         }
 
@@ -167,6 +189,12 @@ namespace TicTacToe
         {
            grid [0,0]=clickJob(btn1,panel1);
            checkGrid(grid[0, 0]);
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            grid[0, 1] = clickJob(btn2, panel2);
+            checkGrid(grid[0, 1]);
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -198,6 +226,102 @@ namespace TicTacToe
             grid[2, 2] = clickJob(btn9, panel9);
             checkGrid(grid[2, 2]);
         }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn2_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn2);
+        }
+
+        private void btn2_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn2);
+        }
+
+        private void btn3_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn3);
+        }
+
+        private void btn3_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn3);
+        }
+
+        private void btn4_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn4);
+        }
+
+        private void btn4_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn4);
+        }
+
+        private void btn1_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn1);
+        }
+
+        private void btn1_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn1);
+        }
+
+        private void btn5_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn5);
+        }
+
+        private void btn5_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn5);
+        }
+
+        private void btn6_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn6);
+        }
+
+        private void btn6_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn6);
+        }
+
+        private void btn7_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn7);
+        }
+
+        private void btn7_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn7);
+        }
+
+        private void btn8_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn8);
+        }
+
+        private void btn8_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn8);
+        }
+
+        private void btn9_MouseEnter(object sender, EventArgs e)
+        {
+            btnEnter(btn9);
+        }
+
+        private void btn9_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelease(btn9);
+        }
+
 
     }
 }

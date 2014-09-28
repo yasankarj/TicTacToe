@@ -14,7 +14,7 @@ namespace TicTacToe
         {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\prog\Angry-Birds-Main-Theme-Song.wav");
            
-                    simpleSound.Play();
+                    simpleSound.PlayLooping();
         }
     }
 }
