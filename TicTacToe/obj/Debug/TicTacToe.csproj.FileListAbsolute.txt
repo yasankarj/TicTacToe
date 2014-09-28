@@ -20,11 +20,12 @@ D:\Programing\C#\TicTacToe\TicTacToe\bin\Debug\TicTacToe.pdb
 D:\Programing\C#\TicTacToe\TicTacToe\bin\Debug\yo\TicTacToe.resources.dll
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csprojResolveAssemblyReference.cache
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.frmChoices.resources
-D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.mulPlayDetails.resources
-D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.MPConsole.resources
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.frmChoices.yo.resources
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\yo\TicTacToe.resources.dll
-D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.SPConsole.resources
 D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Result.resources
+D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.mulPlayer.resources
+D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.SinPlayer.resources
+D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.SinPlayerConsole.resources
+D:\Programing\C#\TicTacToe\TicTacToe\obj\Debug\TicTacToe.MPConsole.resources

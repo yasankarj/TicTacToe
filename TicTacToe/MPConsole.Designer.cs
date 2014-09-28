@@ -50,11 +50,7 @@
             this.btn2 = new System.Windows.Forms.Button();
             this.lblPlayer2 = new System.Windows.Forms.Label();
             this.lblPlayer1 = new System.Windows.Forms.Label();
-            this.pnlPlay1 = new System.Windows.Forms.Panel();
-            this.pnlPlay2 = new System.Windows.Forms.Panel();
             this.panelGrid.SuspendLayout();
-            this.pnlPlay1.SuspendLayout();
-            this.pnlPlay2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn1
@@ -259,38 +255,24 @@
             // lblPlayer2
             // 
             this.lblPlayer2.AutoSize = true;
-            this.lblPlayer2.Font = new System.Drawing.Font("Agent Orange", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer2.Location = new System.Drawing.Point(17, 10);
+            this.lblPlayer2.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblPlayer2.Font = new System.Drawing.Font("Airmole", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer2.Location = new System.Drawing.Point(29, 271);
             this.lblPlayer2.Name = "lblPlayer2";
-            this.lblPlayer2.Size = new System.Drawing.Size(87, 27);
+            this.lblPlayer2.Size = new System.Drawing.Size(65, 27);
             this.lblPlayer2.TabIndex = 10;
             this.lblPlayer2.Text = "label2";
             // 
             // lblPlayer1
             // 
             this.lblPlayer1.AutoSize = true;
-            this.lblPlayer1.Font = new System.Drawing.Font("Agent Orange", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer1.Location = new System.Drawing.Point(17, 10);
+            this.lblPlayer1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblPlayer1.Font = new System.Drawing.Font("Airmole", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer1.Location = new System.Drawing.Point(29, 59);
             this.lblPlayer1.Name = "lblPlayer1";
-            this.lblPlayer1.Size = new System.Drawing.Size(85, 27);
+            this.lblPlayer1.Size = new System.Drawing.Size(63, 27);
             this.lblPlayer1.TabIndex = 9;
             this.lblPlayer1.Text = "label1";
-            // 
-            // pnlPlay1
-            // 
-            this.pnlPlay1.Controls.Add(this.lblPlayer1);
-            this.pnlPlay1.Location = new System.Drawing.Point(12, 18);
-            this.pnlPlay1.Name = "pnlPlay1";
-            this.pnlPlay1.Size = new System.Drawing.Size(133, 144);
-            this.pnlPlay1.TabIndex = 21;
-            // 
-            // pnlPlay2
-            // 
-            this.pnlPlay2.Controls.Add(this.lblPlayer2);
-            this.pnlPlay2.Location = new System.Drawing.Point(12, 245);
-            this.pnlPlay2.Name = "pnlPlay2";
-            this.pnlPlay2.Size = new System.Drawing.Size(133, 144);
-            this.pnlPlay2.TabIndex = 22;
             // 
             // MPConsole
             // 
@@ -299,8 +281,8 @@
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.BackgroundImage = global::TicTacToe.Properties.Resources.consoleBG;
             this.ClientSize = new System.Drawing.Size(673, 418);
-            this.Controls.Add(this.pnlPlay2);
-            this.Controls.Add(this.pnlPlay1);
+            this.Controls.Add(this.lblPlayer2);
+            this.Controls.Add(this.lblPlayer1);
             this.Controls.Add(this.panelGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -310,11 +292,8 @@
             this.Text = "Multi Play Tac Tic Toe";
             this.Load += new System.EventHandler(this.MultiPlayerConsole_Load);
             this.panelGrid.ResumeLayout(false);
-            this.pnlPlay1.ResumeLayout(false);
-            this.pnlPlay1.PerformLayout();
-            this.pnlPlay2.ResumeLayout(false);
-            this.pnlPlay2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -340,8 +319,6 @@
         private System.Windows.Forms.Panel panelGrid;
         private System.Windows.Forms.Label lblPlayer2;
         private System.Windows.Forms.Label lblPlayer1;
-        private System.Windows.Forms.Panel pnlPlay1;
-        private System.Windows.Forms.Panel pnlPlay2;
         private System.Windows.Forms.Button btn2;
     }
 }

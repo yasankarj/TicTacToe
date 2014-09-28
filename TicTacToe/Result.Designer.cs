@@ -28,41 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Result));
             this.lblMsg = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMsg
             // 
             this.lblMsg.AutoSize = true;
-            this.lblMsg.Location = new System.Drawing.Point(167, 94);
+            this.lblMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsg.Location = new System.Drawing.Point(149, 23);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(35, 13);
+            this.lblMsg.Size = new System.Drawing.Size(60, 24);
             this.lblMsg.TabIndex = 0;
             this.lblMsg.Text = "label1";
-            this.lblMsg.Click += new System.EventHandler(this.lblMsg_Click);
             // 
-            // pictureBox1
+            // lblTime
             // 
-            this.pictureBox1.BackgroundImage = global::TicTacToe.Properties.Resources.congratulations_1929;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(558, 335);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(149, 350);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(60, 24);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "label2";
             // 
             // Result
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 359);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(384, 383);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblMsg);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Result";
-            this.Text = "Congrat";
-            this.Load += new System.EventHandler(this.Congrat_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Result_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,6 +72,8 @@
         #endregion
 
         private System.Windows.Forms.Label lblMsg;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTime;
+
+      
     }
 }

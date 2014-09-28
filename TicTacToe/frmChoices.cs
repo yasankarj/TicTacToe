@@ -29,12 +29,14 @@ namespace TicTacToe
         private void btnOne_Click(object sender, EventArgs e)
         {
 
+            SinPlayer newSP = new SinPlayer();
+            newSP.ShowDialog();
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            mulPlayDetails newmulPlay = new mulPlayDetails();
-            newmulPlay.ShowDialog();
+            mulPlayer newMP = new mulPlayer();
+            newMP.Show();
         }
     }
 }

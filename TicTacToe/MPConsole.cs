@@ -21,78 +21,117 @@ namespace TicTacToe
                                          * array elements will hold 2 f player 2 clicks
                                          */
         Stopwatch time = new Stopwatch();
-        
+
+        /*Form Constructor*/
+        public MPConsole(String P1, String P2)
+        {
+            /*constructed with two strings which were collected from previous form*/
+            InitializeComponent();
+            player1 = P1;
+            player2 = P2;
+        }
+        /*Form Constructor*/
+
+
+        /*Form Load Event*/
+        private void MultiPlayerConsole_Load(object sender, EventArgs e)
+        {
+            /*initialize the panel, initially player 1 will take the chance*/
+            lblPlayer1.Text = player1;
+            lblPlayer2.Text = player2;
+            lblPlayer1.ForeColor = Color.Yellow;
+            lblPlayer2.ForeColor = Color.Gray;
+
+            /*panel has a background color, so it will look bad. so it is invisible at the begining*/
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            time.Start();
+
+        }
+        /*Form Load Event*/
+
+        /*checkGrid method*/
+        /*method to track the grid if a player completed the game*/
         public void checkGrid(int x)
         {
             
             /*check for first row of the grid*/
             if (grid[0, 0] == x && grid[0, 1] == x && grid[0, 2] == x)
             {
-                Result newConForm = new Result(x, player1, player2);
-                newConForm.Show();
-                time.Stop();
-                long t = time.ElapsedMilliseconds;
-                timeStamp timeC = new timeStamp(t/1000);
-
-                Console.WriteLine(timeC.show());
+                performWhenGrid(x);
             }
             /*check for second row of the grid*/
             else if (grid[1, 0] == x && grid[1, 1] == x && grid[1, 2] == x)
             {
-                Result newConForm = new Result(x, player1, player2);
-                newConForm.Show();
+                performWhenGrid(x);
             }
 
              /*check for third row of the grid*/
             else if (grid[2, 0] == x && grid[2, 1] == x && grid[2, 2] == x)
             {
-                Result newConForm = new Result(x, player1, player2);
-                newConForm.Show();
+                performWhenGrid(x);
             }
 
              /*check for fourth column of the grid*/
             else if (grid[0, 0] == x && grid[1, 0] == x && grid[2, 0] == x)
             {
-                Result newConForm = new Result(x, player1, player2);
-                newConForm.Show();
+                performWhenGrid(x);
             }
 
              /*check for fifth column of the grid*/
             else if (grid[0, 1] == x && grid[1, 1] == x && grid[2, 1] == x)
             {
-                Result newConForm = new Result(x, player1, player2);
-                newConForm.Show();
+                performWhenGrid(x);
             }
 
              /*check for sixth column of the grid*/
             else if (grid[0, 2] == x && grid[1, 2] == x && grid[2, 2] == x)
             {
-                Result newConForm = new Result(x, player1,player2);
-                newConForm.Show();
+                performWhenGrid(x);
             }
 
              /*check for first diagonal of the grid*/
             else if (grid[0, 0] == x && grid[1, 1] == x && grid[2, 2] == x)
             {
-                Result newConForm = new Result(x, player1, player2);
-                newConForm.Show();
+                performWhenGrid(x);
             }
 
              /*check for second diagonal of the grid*/
             else if (grid[0, 2] == x && grid[1, 1] == x && grid[2, 0] == x)
             {
-                panelGrid.Dispose();
-                Result newConForm = new Result(x, player1, player2);
-                newConForm.Show();
+                performWhenGrid(x);
+
             }
 
             else if (counter == 9)
             {
-                panelGrid.Dispose();
-                Result newConForm = new Result(x, player1+"Booooooooooooo", player2);
+                panelGrid.Enabled = false;
+                Result newConForm = new Result();
                 newConForm.Show();
             }
         }
+        /*checkGrid method*/
+
+        /*perform when grid is in a winning pattern*/
+        public void performWhenGrid(int x)
+        {
+            panelGrid.Enabled = false;
+            time.Stop();
+            long t = time.ElapsedMilliseconds;
+            timeStamp timeC = new timeStamp(t / 1000);
+            Result newConForm = new Result(x, player1, player2,timeC.show());
+            newConForm.Show();
+        }
+        /* performWhenGrid finished*/
 
         /*Button click job method will follow up the click events of the grid buttons*/
         public int clickJob(Button btn, Panel pnl)
@@ -124,47 +163,25 @@ namespace TicTacToe
         }
         /*clickJob method finished*/
 
+        /*btnEnter method*/
+        /*method to perform when mouse pointer enters to the button area*/
         public void btnEnter(Button btn)
         {
             btn.BackgroundImage = TicTacToe.Properties.Resources.relea;        
         }
+        /*btnEnter method finishes*/
 
+        /*btnRelease method*/
+        /*method to perform when mouse pointer enters to the button area*/
         public void btnRelease(Button btn)
         {
             btn.BackgroundImage = TicTacToe.Properties.Resources.click;
         }
-        public MPConsole(String P1, String P2)
-        {
-            /*constructed with two strings which were collected from previous form*/
-            InitializeComponent();
-            player1 = "Player 1\n" + P1;
-            player2 = "Player 2\n" + P2;
-        }
+        /*btnRelease method finishes*/
 
-        private void MultiPlayerConsole_Load(object sender, EventArgs e)
-        {
-            /*initialize the panel, initially player 1 will take the chance*/
-            lblPlayer1.Text = player1;
-            lblPlayer2.Text = player2;
-            lblPlayer1.ForeColor = Color.Red;
-            lblPlayer2.ForeColor = Color.Gray;
 
-            /*panel has a background color, so it will look bad. so it is invisible at the begining*/
-            panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = false;
-
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = false;
-
-            panel7.Visible = false;
-            panel8.Visible = false;
-            panel9.Visible = false;
-            time.Start();
-
-        }
-
+       
+        /*click methods for buttons in the panel*/
         private void button2_Click(object sender, EventArgs e)
         {
             grid[0, 1] = clickJob(btn2, panel2);
@@ -226,12 +243,13 @@ namespace TicTacToe
             grid[2, 2] = clickJob(btn9, panel9);
             checkGrid(grid[2, 2]);
         }
-
+        /*click methods for buttons in the panel finished*/
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
+        /*mouseEnter and mouseRelease methods for buttons in the panel*/
         private void btn2_MouseEnter(object sender, EventArgs e)
         {
             btnEnter(btn2);
@@ -321,7 +339,7 @@ namespace TicTacToe
         {
             btnRelease(btn9);
         }
-
+        /*mouseEnter and mouseRelease methods for buttons in the panel*/
 
     }
 }
