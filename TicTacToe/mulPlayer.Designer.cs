@@ -119,6 +119,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Multi Player";
+            this.Load += new System.EventHandler(this.mulPlayer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

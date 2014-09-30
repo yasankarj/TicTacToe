@@ -31,7 +31,7 @@ namespace TicTacToe
             this.BackgroundImage = TicTacToe.Properties.Resources.g9;
             if (x == 1)
                 lblMsg.Text = A+" win!!!";
-            else if (x == 2)
+            else if (x == -1)
                 lblMsg.Text = B + " win!!!";
             lblTime.Text = "Time Taken : "+Time;
         }

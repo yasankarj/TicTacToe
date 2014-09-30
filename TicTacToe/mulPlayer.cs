@@ -60,9 +60,14 @@ namespace TicTacToe
                 lblMsg.Text = "Please enter Player 1 name";
             }
 
-           else if (txtPlayer1.Text.Length == 0)
+           else if (txtPlayer2.Text.Length == 0)
            {
                lblMsg.Text = "Please enter Player 2 name";
+           }
+
+           else if (txtPlayer1.Text.Equals(txtPlayer2.Text))
+           {
+               lblMsg.Text = "Player Names cannot be equal";
            }
 
            else
@@ -71,6 +76,11 @@ namespace TicTacToe
                newMP.ShowDialog();
                this.Dispose();
            }
+
+        }
+
+        private void mulPlayer_Load(object sender, EventArgs e)
+        {
 
         }
     }

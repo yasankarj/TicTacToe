@@ -12,15 +12,14 @@ namespace TicTacToe
 {
     public partial class MPConsole : Form
     {
-        private String player1;     //player1
-        private String player2;     //player 2
+         String player1;     //player1
+         String player2;     //player 2
         int counter=0;              //counter will differetiate the players
-        int [,] grid = new int [3,3];   /*2d array to map the game
-                                         * array elements will store 0 if no clicks yet
-                                         * array elements will hold 1 if player 1 clicks
-                                         * array elements will hold 2 f player 2 clicks
-                                         */
-        Stopwatch time = new Stopwatch();
+        int [,] grid = new int [3,3];   
+        
+        GamePlay game;
+        
+        
 
         /*Form Constructor*/
         public MPConsole(String P1, String P2)
@@ -54,97 +53,27 @@ namespace TicTacToe
             panel7.Visible = false;
             panel8.Visible = false;
             panel9.Visible = false;
-            time.Start();
+
+            game = new GamePlay(player1, player2);
+            game.StartGame();
 
         }
         /*Form Load Event*/
 
         /*checkGrid method*/
         /*method to track the grid if a player completed the game*/
-        public void checkGrid(int x)
-        {
-            
-            /*check for first row of the grid*/
-            if (grid[0, 0] == x && grid[0, 1] == x && grid[0, 2] == x)
-            {
-                performWhenGrid(x);
-            }
-            /*check for second row of the grid*/
-            else if (grid[1, 0] == x && grid[1, 1] == x && grid[1, 2] == x)
-            {
-                performWhenGrid(x);
-            }
-
-             /*check for third row of the grid*/
-            else if (grid[2, 0] == x && grid[2, 1] == x && grid[2, 2] == x)
-            {
-                performWhenGrid(x);
-            }
-
-             /*check for fourth column of the grid*/
-            else if (grid[0, 0] == x && grid[1, 0] == x && grid[2, 0] == x)
-            {
-                performWhenGrid(x);
-            }
-
-             /*check for fifth column of the grid*/
-            else if (grid[0, 1] == x && grid[1, 1] == x && grid[2, 1] == x)
-            {
-                performWhenGrid(x);
-            }
-
-             /*check for sixth column of the grid*/
-            else if (grid[0, 2] == x && grid[1, 2] == x && grid[2, 2] == x)
-            {
-                performWhenGrid(x);
-            }
-
-             /*check for first diagonal of the grid*/
-            else if (grid[0, 0] == x && grid[1, 1] == x && grid[2, 2] == x)
-            {
-                performWhenGrid(x);
-            }
-
-             /*check for second diagonal of the grid*/
-            else if (grid[0, 2] == x && grid[1, 1] == x && grid[2, 0] == x)
-            {
-                performWhenGrid(x);
-
-            }
-
-            else if (counter == 9)
-            {
-                panelGrid.Enabled = false;
-                Result newConForm = new Result();
-                newConForm.Show();
-            }
-        }
-        /*checkGrid method*/
-
-        /*perform when grid is in a winning pattern*/
-        public void performWhenGrid(int x)
-        {
-            panelGrid.Enabled = false;
-            time.Stop();
-            long t = time.ElapsedMilliseconds;
-            timeStamp timeC = new timeStamp(t / 1000);
-            Result newConForm = new Result(x, player1, player2,timeC.show());
-            newConForm.Show();
-        }
-        /* performWhenGrid finished*/
+       
 
         /*Button click job method will follow up the click events of the grid buttons*/
-        public int clickJob(Button btn, Panel pnl)
+        public void clickJob(Button btn, Panel pnl)
         {
             btn.Dispose();
-            int retVal = 0;
           
-            if (counter % 2 == 0)
+            if (game.gameCounter % 2 ==0)
             {
 
                 lblPlayer1.ForeColor = Color.Gray;
                 lblPlayer2.ForeColor = Color.Yellow;
-                retVal = 1;
                 pnl.Visible = true;
                 pnl.BackgroundImage = TicTacToe.Properties.Resources.X;
             }
@@ -153,12 +82,10 @@ namespace TicTacToe
             {
                 lblPlayer2.ForeColor = Color.Gray;
                 lblPlayer1.ForeColor = Color.Yellow;
-                retVal= 2;
                 pnl.Visible = true;
                 pnl.BackgroundImage = TicTacToe.Properties.Resources.O;
             }
-            counter++;
-            return retVal;
+            
 
         }
         /*clickJob method finished*/
@@ -179,69 +106,87 @@ namespace TicTacToe
         }
         /*btnRelease method finishes*/
 
-
+        public void disablePanel(bool state)
+        { 
+            if (state)
+                panelGrid.Enabled = false;
+        }
        
         /*click methods for buttons in the panel*/
-        private void button2_Click(object sender, EventArgs e)
-        {
-            grid[0, 1] = clickJob(btn2, panel2);
-            checkGrid(grid[0, 1]);
-           
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            grid[2, 0] = clickJob(btn7, panel7);
-            checkGrid(grid[2, 0]);
-            
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            grid[2,1]=clickJob(btn8,panel8);
-            checkGrid(grid[2, 1]);
-        }
-
+        
         private void btn1_Click(object sender, EventArgs e)
         {
-           grid [0,0]=clickJob(btn1,panel1);
-           checkGrid(grid[0, 0]);
+
+            clickJob(btn1, panel1);
+            game.Play(1);
+            disablePanel(game.terminateState);
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            grid[0, 1] = clickJob(btn2, panel2);
-            checkGrid(grid[0, 1]);
+            
+            clickJob(btn2, panel2);
+            game.Play(2);
+
+            disablePanel(game.terminateState);
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-           grid [0,2] = clickJob(btn3,panel3);
-           checkGrid(grid[0, 2]);
+            
+            clickJob(btn3, panel3);
+            game.Play(3);
+
+            disablePanel(game.terminateState);
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            grid[1, 0] = clickJob(btn4, panel4);
-            checkGrid(grid[1, 0]);
+            
+            clickJob(btn4, panel4);
+            game.Play(4);
+            disablePanel(game.terminateState);
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            grid[1, 1] = clickJob(btn5, panel5);
-           checkGrid(grid[1, 1]);
+            
+            clickJob(btn5, panel5);
+            game.Play(5);
+            disablePanel(game.terminateState);
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            grid[1, 2] = clickJob(btn6, panel6);
-            checkGrid(grid[1, 2]);
+            
+            clickJob(btn6, panel6);
+            game.Play(6);
+            disablePanel(game.terminateState);
         }
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            
+            clickJob(btn7, panel7);
+            game.Play(7);
+            disablePanel(game.terminateState);
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            
+            clickJob(btn8, panel8);
+            game.Play(8);
+            disablePanel(game.terminateState);
+        }
+
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            grid[2, 2] = clickJob(btn9, panel9);
-            checkGrid(grid[2, 2]);
+            
+            clickJob(btn9, panel9);
+            game.Play(9);
+
+            disablePanel(game.terminateState);
         }
         /*click methods for buttons in the panel finished*/
         private void panel8_Paint(object sender, PaintEventArgs e)
@@ -339,6 +284,14 @@ namespace TicTacToe
         {
             btnRelease(btn9);
         }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+        
         /*mouseEnter and mouseRelease methods for buttons in the panel*/
 
     }

@@ -121,7 +121,7 @@
             this.btn7.Size = new System.Drawing.Size(100, 100);
             this.btn7.TabIndex = 6;
             this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.button7_Click);
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             this.btn7.MouseEnter += new System.EventHandler(this.btn7_MouseEnter);
             this.btn7.MouseLeave += new System.EventHandler(this.btn7_MouseLeave);
             // 
@@ -133,7 +133,7 @@
             this.btn8.Size = new System.Drawing.Size(100, 100);
             this.btn8.TabIndex = 7;
             this.btn8.UseVisualStyleBackColor = true;
-            this.btn8.Click += new System.EventHandler(this.button8_Click);
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             this.btn8.MouseEnter += new System.EventHandler(this.btn8_MouseEnter);
             this.btn8.MouseLeave += new System.EventHandler(this.btn8_MouseLeave);
             // 
@@ -180,7 +180,7 @@
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(204, 165);
+            this.panel5.Location = new System.Drawing.Point(204, 164);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(100, 100);
             this.panel5.TabIndex = 15;
@@ -213,6 +213,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(100, 100);
             this.panel9.TabIndex = 19;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // panelGrid
             // 
@@ -300,6 +301,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btn5;
@@ -319,6 +321,5 @@
         private System.Windows.Forms.Panel panelGrid;
         private System.Windows.Forms.Label lblPlayer2;
         private System.Windows.Forms.Label lblPlayer1;
-        private System.Windows.Forms.Button btn2;
     }
 }

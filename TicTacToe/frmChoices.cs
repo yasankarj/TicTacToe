@@ -19,8 +19,8 @@ namespace TicTacToe
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            MusicPlay player = new MusicPlay();
+
+            MusicPlay player = MusicPlay.getMusicPlayer();
             player.playIntroSound();
 
           
