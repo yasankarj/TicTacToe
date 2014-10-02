@@ -39,9 +39,9 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn4 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.btn5 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.btn6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn7 = new System.Windows.Forms.Button();
@@ -56,7 +56,11 @@
             // panelGrid
             // 
             this.panelGrid.BackgroundImage = global::TicTacToe.Properties.Resources.console;
+            this.panelGrid.Controls.Add(this.btn4);
+            this.panelGrid.Controls.Add(this.btn5);
             this.panelGrid.Controls.Add(this.btn2);
+            this.panelGrid.Controls.Add(this.panel4);
+            this.panelGrid.Controls.Add(this.panel5);
             this.panelGrid.Controls.Add(this.panel1);
             this.panelGrid.Controls.Add(this.panel9);
             this.panelGrid.Controls.Add(this.btn1);
@@ -64,10 +68,6 @@
             this.panelGrid.Controls.Add(this.panel7);
             this.panelGrid.Controls.Add(this.btn3);
             this.panelGrid.Controls.Add(this.panel6);
-            this.panelGrid.Controls.Add(this.btn4);
-            this.panelGrid.Controls.Add(this.panel5);
-            this.panelGrid.Controls.Add(this.btn5);
-            this.panelGrid.Controls.Add(this.panel4);
             this.panelGrid.Controls.Add(this.btn6);
             this.panelGrid.Controls.Add(this.panel3);
             this.panelGrid.Controls.Add(this.btn7);
@@ -82,11 +82,13 @@
             // btn2
             // 
             this.btn2.BackgroundImage = global::TicTacToe.Properties.Resources.click;
-            this.btn2.Location = new System.Drawing.Point(204, 59);
+            this.btn2.Location = new System.Drawing.Point(205, 59);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(100, 100);
             this.btn2.TabIndex = 20;
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
+            this.btn2.MouseEnter += new System.EventHandler(this.btn2_MouseEnter);
             // 
             // panel1
             // 
@@ -111,6 +113,9 @@
             this.btn1.Size = new System.Drawing.Size(100, 100);
             this.btn1.TabIndex = 0;
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            this.btn1.MouseEnter += new System.EventHandler(this.btn1_MouseEnter);
+            this.btn1.MouseLeave += new System.EventHandler(this.btn1_MouseLeave);
             // 
             // panel8
             // 
@@ -121,7 +126,7 @@
             // 
             // panel7
             // 
-            this.panel7.Location = new System.Drawing.Point(98, 271);
+            this.panel7.Location = new System.Drawing.Point(100, 271);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(100, 100);
             this.panel7.TabIndex = 17;
@@ -134,6 +139,9 @@
             this.btn3.Size = new System.Drawing.Size(100, 100);
             this.btn3.TabIndex = 2;
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
+            this.btn3.MouseEnter += new System.EventHandler(this.btn3_MouseEnter);
+            this.btn3.MouseLeave += new System.EventHandler(this.btn3_MouseLeave);
             // 
             // panel6
             // 
@@ -150,29 +158,35 @@
             this.btn4.Size = new System.Drawing.Size(100, 100);
             this.btn4.TabIndex = 3;
             this.btn4.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(204, 165);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(100, 100);
-            this.panel5.TabIndex = 15;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
+            this.btn4.MouseEnter += new System.EventHandler(this.btn4_MouseEnter);
+            this.btn4.MouseLeave += new System.EventHandler(this.btn4_MouseLeave);
             // 
             // btn5
             // 
             this.btn5.BackgroundImage = global::TicTacToe.Properties.Resources.click;
-            this.btn5.Location = new System.Drawing.Point(204, 165);
+            this.btn5.Location = new System.Drawing.Point(204, 164);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(100, 100);
             this.btn5.TabIndex = 4;
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
+            this.btn5.MouseEnter += new System.EventHandler(this.btn5_MouseEnter);
+            this.btn5.MouseLeave += new System.EventHandler(this.btn5_MouseLeave);
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(98, 165);
+            this.panel4.Location = new System.Drawing.Point(100, 165);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(100, 100);
             this.panel4.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(205, 165);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(100, 100);
+            this.panel5.TabIndex = 15;
             // 
             // btn6
             // 
@@ -182,6 +196,9 @@
             this.btn6.Size = new System.Drawing.Size(100, 100);
             this.btn6.TabIndex = 5;
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
+            this.btn6.MouseEnter += new System.EventHandler(this.btn6_MouseEnter);
+            this.btn6.MouseLeave += new System.EventHandler(this.btn6_MouseLeave);
             // 
             // panel3
             // 
@@ -198,6 +215,9 @@
             this.btn7.Size = new System.Drawing.Size(100, 100);
             this.btn7.TabIndex = 6;
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
+            this.btn7.MouseEnter += new System.EventHandler(this.btn7_MouseEnter);
+            this.btn7.MouseLeave += new System.EventHandler(this.btn7_MouseLeave);
             // 
             // panel2
             // 
@@ -214,6 +234,9 @@
             this.btn8.Size = new System.Drawing.Size(100, 100);
             this.btn8.TabIndex = 7;
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
+            this.btn8.MouseEnter += new System.EventHandler(this.btn8_MouseEnter);
+            this.btn8.MouseLeave += new System.EventHandler(this.btn8_MouseLeave);
             // 
             // btn9
             // 
@@ -223,6 +246,9 @@
             this.btn9.Size = new System.Drawing.Size(100, 100);
             this.btn9.TabIndex = 8;
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
+            this.btn9.MouseEnter += new System.EventHandler(this.btn9_MouseEnter);
+            this.btn9.MouseLeave += new System.EventHandler(this.btn9_MouseLeave);
             // 
             // lblPlayer
             // 

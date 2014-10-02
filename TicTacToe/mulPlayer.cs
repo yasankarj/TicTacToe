@@ -74,7 +74,6 @@ namespace TicTacToe
            {
                MPConsole newMP = new MPConsole(txtPlayer1.Text, txtPlayer2.Text);
                newMP.ShowDialog();
-               this.Dispose();
            }
 
         }

@@ -14,7 +14,7 @@ namespace TicTacToe
     {
          String player1;     //player1
          String player2;     //player 2
-        int counter=0;              //counter will differetiate the players
+        
         int [,] grid = new int [3,3];   
         
         GamePlay game;
@@ -65,7 +65,7 @@ namespace TicTacToe
        
 
         /*Button click job method will follow up the click events of the grid buttons*/
-        public void clickJob(Button btn, Panel pnl)
+        public void clickJob(Button btn, Panel pnl,int val)
         {
             btn.Dispose();
           
@@ -85,6 +85,9 @@ namespace TicTacToe
                 pnl.Visible = true;
                 pnl.BackgroundImage = TicTacToe.Properties.Resources.O;
             }
+
+            game.PlayMulti(val);
+            disablePanel(game.TerminateState);
             
 
         }
@@ -117,76 +120,55 @@ namespace TicTacToe
         private void btn1_Click(object sender, EventArgs e)
         {
 
-            clickJob(btn1, panel1);
-            game.Play(1);
-            disablePanel(game.terminateState);
+            clickJob(btn1, panel1,1);
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
             
-            clickJob(btn2, panel2);
-            game.Play(2);
-
-            disablePanel(game.terminateState);
+            clickJob(btn2, panel2,2);
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
             
-            clickJob(btn3, panel3);
-            game.Play(3);
-
-            disablePanel(game.terminateState);
+            clickJob(btn3, panel3,3);
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
             
-            clickJob(btn4, panel4);
-            game.Play(4);
-            disablePanel(game.terminateState);
+            clickJob(btn4, panel4,4);
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
             
-            clickJob(btn5, panel5);
-            game.Play(5);
-            disablePanel(game.terminateState);
+            clickJob(btn5, panel5,5);
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
             
-            clickJob(btn6, panel6);
-            game.Play(6);
-            disablePanel(game.terminateState);
+            clickJob(btn6, panel6,6);
         }
         private void btn7_Click(object sender, EventArgs e)
         {
             
-            clickJob(btn7, panel7);
-            game.Play(7);
-            disablePanel(game.terminateState);
+            clickJob(btn7, panel7,7);
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
             
-            clickJob(btn8, panel8);
-            game.Play(8);
-            disablePanel(game.terminateState);
+            clickJob(btn8, panel8,8);
         }
 
 
         private void btn9_Click(object sender, EventArgs e)
         {
             
-            clickJob(btn9, panel9);
-            game.Play(9);
-
-            disablePanel(game.terminateState);
+            clickJob(btn9, panel9,9);
         }
         /*click methods for buttons in the panel finished*/
         private void panel8_Paint(object sender, PaintEventArgs e)

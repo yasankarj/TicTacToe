@@ -19,9 +19,11 @@ namespace TicTacToe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SinPlayerConsole newSP = new SinPlayerConsole(txtPlayer.Text);
-            newSP.ShowDialog();
-            this.Dispose();
+            if (!txtPlayer.Text.Equals(""))
+            {
+                SinPlayerConsole newSP = new SinPlayerConsole(txtPlayer.Text);
+                newSP.ShowDialog();
+            }            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -42,5 +44,6 @@ namespace TicTacToe
                 btnPlay.Enabled = true;
             }
         }
+
     }
 }

@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class Player
+    abstract class Player
     {
         public String name = "";
         public short value;
 
-        public Player(String name, short value) 
+        abstract public short mark();
+        abstract public int mark(short [,] arr);
+        /*public Player(String name, short value) 
         {
             this.name = name;
             this.value = value;
-        }
+        }*/
 
-        public short mark()
+        /*public short mark()
         {
             return value;
-        }
+        }*/
     }
 }

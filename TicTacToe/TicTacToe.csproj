@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputerPlayer.cs" />
     <Compile Include="GamePlay.cs" />
+    <Compile Include="humanPlayer.cs" />
     <Compile Include="mulPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,12 +153,9 @@
   <ItemGroup>
     <None Include="Resources\sad.gif" />
     <None Include="Resources\tied.jpg" />
-    <None Include="Resources\SelfConfidence.png" />
     <None Include="Resources\sinPlay.jpg" />
     <None Include="Resources\relea.jpg" />
     <None Include="Resources\click.jpg" />
-    <None Include="Resources\Congrats.jpg" />
-    <None Include="Resources\conssss.jpg" />
     <None Include="Resources\g9.jpg" />
     <Content Include="Resources\Image1.gif" />
     <None Include="Resources\consoleBG.jpg" />
